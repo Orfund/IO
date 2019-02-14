@@ -18,8 +18,10 @@
 
 
 class Iobj{
+public:
     class types{
     public:
+        /*все структуры должны иметь статическими методами с аргументом object*self все апи-функции (описаны в iotype.h)*/
         struct object;
         struct number;
         struct string;
@@ -31,7 +33,9 @@ class Iobj{
         struct slice;
         struct type;
     };
+private:
     types::object*ptr;
+
 };
 
 #define IOHEAD int refcnt; const type* typeref;
